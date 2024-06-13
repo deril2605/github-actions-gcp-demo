@@ -103,7 +103,7 @@ rcf_predictions = model.predict(X_test)
 evaluate_model(y_test,rcf_predictions)
 
 # Define model name
-artifact_filename = 'model.pkl'
+artifact_filename = 'model1.pkl'
 
 # Save model artifact to local filesystem (doesn't persist)
 local_path = artifact_filename
