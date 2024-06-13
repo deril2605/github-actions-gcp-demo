@@ -29,7 +29,7 @@ parser.add_argument(
     default = os.environ['AIP_MODEL_DIR'] if 'AIP_MODEL_DIR' in os.environ else ""
 )
 
-# Parse arguments
+# Parse argumentsss
 args = parser.parse_args()
 arguments = args.__dict__
 
