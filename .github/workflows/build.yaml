@@ -4,6 +4,7 @@ on:
   push:
     paths:
     - 'src/trainer/**'
+    - '.github/workflows/**'
     branches:
     - 'main'
 
