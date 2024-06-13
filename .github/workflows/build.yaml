@@ -1,7 +1,9 @@
-name: Deploy Nginx
+name: Deploy Trainer
 
 on:
   push:
+    paths:
+    - 'src/trainer/**'
     branches:
     - 'main'
 
@@ -25,5 +27,5 @@ jobs:
         GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
       run: |
         gcloud auth configure-docker us-central1-docker.pkg.dev
-        docker build -t us-central1-docker.pkg.dev/$GOOGLE_PROJECT/demo/nginx:latest .
-        docker push us-central1-docker.pkg.dev/$GOOGLE_PROJECT/demo/nginx:latest
+        docker build -t us-central1-docker.pkg.dev/$GOOGLE_PROJECT/sepsis-mlops-repo/train_pipeline:latest .
+        docker push us-central1-docker.pkg.dev/$GOOGLE_PROJECT/sepsis-mlops-repo/train_pipeline:latest
